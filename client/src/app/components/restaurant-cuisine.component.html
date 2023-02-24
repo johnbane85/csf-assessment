@@ -1,0 +1,11 @@
+<h1>Lisf of {{ cuisine }}</h1>
+
+<table border="1">
+  <tr *ngFor="let r of restaurants">
+    <td>
+      <div class="box">{{ r.name }}</div>
+    </td>
+  </tr>
+</table>
+
+<button type="button" [routerLink]="['/']">Back</button>

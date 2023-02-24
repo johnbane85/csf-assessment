@@ -1,0 +1,10 @@
+<h1>List of Cuisines</h1>
+<table border="1">
+  <tr *ngFor="let c of cuisines">
+    <td>
+      <div class="box" routerLink="{{ c }}/restaurants">
+        {{ c }}
+      </div>
+    </td>
+  </tr>
+</table>

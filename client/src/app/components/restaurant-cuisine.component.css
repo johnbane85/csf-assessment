@@ -1,0 +1,11 @@
+.box {
+  padding: 8px;
+}
+
+.box:hover {
+  background-color: grey;
+  font-weight: bold;
+  padding: 8px;
+  text-decoration: underline;
+  cursor: pointer;
+}

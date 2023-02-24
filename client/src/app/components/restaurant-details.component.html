@@ -1,0 +1,38 @@
+<div>
+  <p>Name: {{ restaurant_name }}</p>
+  <p>Cuisine: {{ cuisine }}</p>
+  <p>Address: {{ address }}</p>
+
+  <img [src]="imgUrl" />
+</div>
+
+<h3>Comment</h3>
+<form [formGroup]="form" (ngSubmit)="postRating()">
+  <table>
+    <tr>
+      <td><label>Name:</label></td>
+      <td><input type="text" formControlName="name" /></td>
+    </tr>
+    <tr>
+      <td><label>Rating:</label></td>
+      <td>
+        <select formControlName="rating">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <textarea formControlName="comment" cols="30" rows="3"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td><button type="button" (click)="onBack()"></button>Back</td>
+      <td><button type="submit" [disabled]="form.invalid">Submit</button></td>
+    </tr>
+  </table>
+</form>

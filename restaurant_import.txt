@@ -1,0 +1,5 @@
+TODO: Task 1 - Write the mongo import command here
+
+mongoimport -hlocalhost --port=27017 -drailway -crestaurants --jsonArray restaurants.json
+
+mongoimport --uri "mongodb://mongo:${MONGO_PASSWORD}@containers-us-west-191.railway.app:7775/railway" --authenticationDatabase=admin -crestaurants --jsonArray restaurants.json
